@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,35 +31,35 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex space-x-4 space-x-reverse">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/eae4a9d5-8e3d-4420-a594-db79c99d1b5e.png" 
               alt="أنوبيس ويب" 
               className="h-8 md:h-10 object-contain"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6 space-x-reverse">
-          <a 
-            href="#" 
+          <Link 
+            to="/blogger-templates" 
             className="px-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
           >
             قوالب بلوجر
-          </a>
-          <a 
-            href="#" 
+          </Link>
+          <Link 
+            to="/wordpress-templates" 
             className="px-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
           >
             قوالب ووردبريس
-          </a>
-          <a 
-            href="#" 
+          </Link>
+          <Link 
+            to="/addons" 
             className="px-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
           >
             اضافات
-          </a>
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-4 space-x-reverse">
@@ -111,27 +112,27 @@ const Navbar = () => {
         )}
       >
         <div className="flex flex-col space-y-4 px-8 py-6">
-          <a 
-            href="#" 
+          <Link 
+            to="/blogger-templates" 
             className="px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 border-b border-gray-100"
             onClick={() => setIsMenuOpen(false)}
           >
             قوالب بلوجر
-          </a>
-          <a 
-            href="#" 
+          </Link>
+          <Link 
+            to="/wordpress-templates" 
             className="px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 border-b border-gray-100"
             onClick={() => setIsMenuOpen(false)}
           >
             قوالب ووردبريس
-          </a>
-          <a 
-            href="#" 
+          </Link>
+          <Link 
+            to="/addons" 
             className="px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 border-b border-gray-100"
             onClick={() => setIsMenuOpen(false)}
           >
             اضافات
-          </a>
+          </Link>
           
           <div className="flex justify-center space-x-4 space-x-reverse pt-4">
             <a href="#" className="social-icon social-icon-youtube">
