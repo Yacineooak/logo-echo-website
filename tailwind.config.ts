@@ -53,6 +53,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))"
         },
+        orange: {
+          DEFAULT: "#F97316",
+          light: "#FEC6A1",
+        },
+        anubis: {
+          yellow: "#FFC107",
+          blue: "#0EA5E9",
+          cyan: "#22D3EE",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -85,6 +94,10 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        'cairo': ['Cairo', 'sans-serif'],
+        'tajawal': ['Tajawal', 'sans-serif'],
       },
     }
   },
