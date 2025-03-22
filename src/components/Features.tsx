@@ -1,5 +1,5 @@
 
-import { Smartphone, Code, FileText, Rocket } from 'lucide-react';
+import { Smartphone, Code, FileText, Rocket, Layers, Globe } from 'lucide-react';
 
 const features = [
   {
@@ -26,13 +26,26 @@ const features = [
     icon: Rocket,
     iconColor: 'text-anubis-blue',
   },
+  {
+    title: 'تطوير سكربتات',
+    description: 'تطوير سكربتات خاصة بمتطلباتك وإضافة ميزات جديدة لمواقعك',
+    icon: Layers,
+    iconColor: 'text-orange-500',
+  },
+  {
+    title: 'استضافة المواقع',
+    description: 'توفير استضافة موثوقة وسريعة لمواقع الووردبريس والمواقع المخصصة',
+    icon: Globe,
+    iconColor: 'text-anubis-blue',
+  },
 ];
 
 const FeatureCard = ({ feature, index }: { feature: typeof features[0], index: number }) => {
   return (
     <div 
-      className="relative p-8 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 slide-up"
+      className="relative p-6 md:p-8 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 slide-up"
       style={{ animationFillMode: 'forwards', animationDelay: `${index * 0.1 + 0.2}s` }}
+      data-animate
     >
       <div className="flex flex-col space-y-4">
         <div className="h-16 w-16 rounded-full bg-white shadow-md flex items-center justify-center">
@@ -48,18 +61,18 @@ const FeatureCard = ({ feature, index }: { feature: typeof features[0], index: n
 // Features section component
 const Features = () => {
   return (
-    <section id="features" className="py-24">
+    <section id="features" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 opacity-0 slide-up" style={{animationFillMode: 'forwards'}}>
+          <h2 className="text-4xl font-bold text-gray-900 opacity-0 slide-up" style={{animationFillMode: 'forwards'}} data-animate>
             ما الذي يميزنا
           </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl opacity-0 slide-up stagger-1" style={{animationFillMode: 'forwards'}}>
+          <p className="mt-4 text-xl text-gray-600 max-w-3xl opacity-0 slide-up stagger-1" style={{animationFillMode: 'forwards'}} data-animate>
             نقدم لكم أفضل الحلول التقنية لتطوير مواقع الويب وتطبيقات الجوال
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} feature={feature} index={index} />
           ))}
